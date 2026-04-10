@@ -24,3 +24,7 @@ jobs:
         with:
           target: minor
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+        env:
+          UPDATE_TYPE: ${{ steps.dependabot-metadata.outputs.update-type }}
+          DEPENDENCY_TYPE: ${{ steps.dependabot-metadata.outputs.dependency-type }}
+          DEPENDENCY_NAMES: ${{ steps.dependabot-metadata.outputs.dependency-names }}
