@@ -13,18 +13,7 @@ jobs:
     if: github.actor == 'dependabot[bot]'
 
     steps:
-      - name: Fetch Dependabot metadata
-        id: dependabot-metadata
-        uses: dependabot/fetch-metadata@v2
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-
       - name: Auto-merge Dependabot PRs
         uses: fastify/github-action-merge-dependabot@v3
         with:
-          target: minor
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-        env:
-          UPDATE_TYPE: ${{ steps.dependabot-metadata.outputs.update-type }}
-          DEPENDENCY_TYPE: ${{ steps.dependabot-metadata.outputs.dependency-type }}
-          DEPENDENCY_NAMES: ${{ steps.dependabot-metadata.outputs.dependency-names }}
+          target: major
