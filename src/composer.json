@@ -11,7 +11,7 @@
         "laravel/sanctum": "^4.0",
         "laravel/socialite": "^5.16",
         "laravel/tinker": "^3.0",
-        "spatie/laravel-sluggable": "^3.5"
+        "spatie/laravel-sluggable": "^4.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
